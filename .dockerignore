@@ -1,0 +1,9 @@
+.git
+.vscode
+models/
+results/
+notebooks/
+docker/
+
+# Special files
+model-converters/DRUNet/drunet_color.pth

@@ -1,0 +1,7 @@
+name: lfattnet_convert
+dependencies:
+  - python=3.6
+  - pip
+  - pip:
+      - tensorflow==2.4.3
+      - tensorflow-addons==0.12

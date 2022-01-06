@@ -1,0 +1,1 @@
+Download all "Full color datasets" in AVI format from https://users.soe.ucsc.edu/~milanfar/software/sr-datasets.html and place them in this folder.

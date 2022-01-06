@@ -1,0 +1,12 @@
+[submodule "methods/dmsp_paper/DMSP"]
+	path = methods/dmsp_paper/DMSP
+	url = https://github.com/siavashBigdeli/DMSP-TF2.git
+[submodule "methods/dncnn/KAIR"]
+	path = methods/dncnn/KAIR
+	url = https://github.com/cszn/KAIR.git
+[submodule "methods/dpir/DPIR"]
+	path = methods/dpir/DPIR
+	url = https://github.com/cszn/DPIR.git
+[submodule "methods/lfssr/LFSSR-ATO"]
+	path = methods/lfssr/LFSSR-ATO
+	url = https://github.com/jingjin25/LFSSR-ATO.git
