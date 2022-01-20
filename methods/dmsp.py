@@ -40,7 +40,7 @@ def nb_deblurring(test_run, args):
         if noise_mode == "na":
             noise_stddev = None
 
-        return dppp.dmsp_deblur(
+        return dppp.dmsp_deblur_nb(
             degraded=blurry[None, ...],
             denoiser=denoiser,
             denoiser_stddev=denoiser_stddev,
