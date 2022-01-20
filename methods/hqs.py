@@ -50,7 +50,7 @@ def sisr(test_run, args):
     bicubic_resize_fn = dppp.create_resize_fn("bicubic", True)
     num_steps = 5 if test_run else 30
 
-    def superresolver(lr, scale_factor, kernel):
+    def superresolver(lr, scale_factor, kernel=None):
         if kernel is None:
             # Bicubic
             resize_fn = bicubic_resize_fn
@@ -82,7 +82,7 @@ def vsr(test_run, args):
     num_steps = 5 if test_run else 30
 
     # Define the deblurrer using dppp.
-    def superresolver(lr_video, ref_index, scale_factor, kernel):
+    def superresolver(lr_video, ref_index, scale_factor, kernel=None):
         if kernel is None:
             # Bicubic
             resize_fn = bicubic_resize_fn
@@ -124,7 +124,7 @@ def lfsr(test_run, args):
     bicubic_resize_fn = dppp.create_resize_fn("bicubic", True)
     num_steps = 5 if test_run else 30
 
-    def superresolver(lr, scale_factor, kernel):
+    def superresolver(lr, scale_factor, kernel=None):
         if kernel is None:
             # Bicubic
             resize_fn = bicubic_resize_fn

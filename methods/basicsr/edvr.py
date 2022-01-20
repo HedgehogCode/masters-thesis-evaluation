@@ -70,7 +70,7 @@ def vsr(test_run, args):
 def lfsr(test_run, args):
     video_superresolver = vsr(test_run, None)
 
-    def lf_superresolver(lr_lf, scale_factor, kernel):
+    def lf_superresolver(lr_lf, scale_factor, kernel=None):
         lr_video = datasets.lf_to_batch(lr_lf)
         ref_index = tf.shape(lr_video)[0] // 2
 

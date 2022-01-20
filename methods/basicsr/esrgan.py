@@ -50,7 +50,7 @@ def sisr(test_run, args):
 def vsr(test_run, args):
     si_superresolver, _ = sisr(test_run, None)
 
-    def video_superresolver(lr_video, ref_index, scale_factor, kernel):
+    def video_superresolver(lr_video, ref_index, scale_factor, kernel=None):
         return si_superresolver(lr_video[ref_index], scale_factor, kernel)
 
     return video_superresolver, "esrgan"
@@ -59,7 +59,7 @@ def vsr(test_run, args):
 def lfsr(test_run, args):
     si_superresolver, _ = sisr(test_run, None)
 
-    def lf_superresolver(lr_lf, scale_factor, kernel):
+    def lf_superresolver(lr_lf, scale_factor, kernel=None):
         lf_grid = tf.shape(lr_lf)[:2]
         lf_center = tf.math.floordiv(lf_grid, 2)
         return si_superresolver(lr_lf[lf_center[0], lf_center[1]], scale_factor, kernel)
