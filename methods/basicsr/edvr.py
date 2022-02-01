@@ -36,7 +36,7 @@ def vsr(test_run, args):
     model.load_state_dict(torch.load(PRETRAINED_EDVR)["params"], strict=True)
     model.eval()
 
-    def video_superresolver(lr_video, ref_index, scale_factor, kernel):
+    def video_superresolver(lr_video, ref_index, scale_factor, kernel=None):
         if scale_factor != 4:
             raise MethodNotApplicableError()
 
@@ -68,7 +68,7 @@ def vsr(test_run, args):
 
 
 def lfsr(test_run, args):
-    video_superresolver = vsr(test_run, None)
+    video_superresolver, _ = vsr(test_run, None)
 
     def lf_superresolver(lr_lf, scale_factor, kernel=None):
         lr_video = datasets.lf_to_batch(lr_lf)
